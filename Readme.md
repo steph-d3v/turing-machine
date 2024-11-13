@@ -58,7 +58,7 @@ Voici les instructions du programme qui effectue la négation bit à bit :
 - `{ a, b, @ }` constitue l'ensemble des états que peut prendre la machine.
 - `a` est l'état initial de la machine.
 - `@` est l'état qui marque la terminaison du programme et l'arrêt de la machine.
-- `_` indique la lecture du symbole "blanc" (case vide) sur le ruban.
+- `_` indique la lecture d'une case vide (symbole "blanc") sur le ruban.
 - `<` est la commande de déplacement de la tête d'une case vers la gauche.
 - `>` est la commande de déplacement de la tête d'une case vers la droite.
 
@@ -70,11 +70,15 @@ Voici les instructions du programme qui effectue la négation bit à bit :
 python3 turing.py 'a_ > a0  ba1  bb01> b10> b_  @' _10110001_ a:@ 0
 ```
 
+<img src="assets/demo-1.gif" width="530px" height="211px" alt="Négation d'un nombre binaire">
+
 **Addition de deux nombres binaires**
 
 ```sh
 python3 turing.py 'a0 > a1 > a_ >bb0 > b1 > b_ <cc01< c10<dc_ >fd0 < d1 < d_ <ee01>ae10< e_1>af1_> f_  @' _11011_1001_ a:@ 1
 ```
+
+<img src="assets/demo-2.gif" width="530px" height="211px" alt="Addition de deux nombres binaires">
 
 _N.B. : en fonction des données à traiter, veillez à prévoir un ruban suffisamment large pour qu'il n'y ait pas de débordement lors du déplacement de la tête de lecture / écriture._
 
